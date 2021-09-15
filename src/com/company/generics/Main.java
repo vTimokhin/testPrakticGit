@@ -5,15 +5,21 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        RoomOne rw = new RoomOne(1);
-        House rw2 = new RoomOne(2);
-        List<House> listHouse = new ArrayList<>();
-        printXToRoom(listHouse);
+        List<House> listOfHouse = new ArrayList<>();
+        listOfHouse.add(new House(1));
+        listOfHouse.add(new House (2));
+
+        List<RoomOne> listOfRoomOne = new ArrayList<>();
+        listOfRoomOne.add(new RoomOne(3));
+        listOfRoomOne.add(new RoomOne(4));
+
+        printXToRoom(listOfHouse);
+        //printXToRoom(listOfRoomOne);
     }
 
-    private static void printXToRoom(List<House> lh) {
+    private static void printXToRoom(List<? extends House> lh) {
         for (House house : lh) {
-            house.toString();
+            System.out.println(house.toString());
         }
     }
 }

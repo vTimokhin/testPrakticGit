@@ -6,7 +6,7 @@ public class House {
    public House (int x) {
        this.x = x;
    }
-    public String toString() {
+   public String toString() {
        return String.valueOf(x);
    }
 }
