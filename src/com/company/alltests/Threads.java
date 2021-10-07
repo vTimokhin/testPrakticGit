@@ -5,6 +5,7 @@ public class Threads {
         MyThreads myThread1 = new MyThreads();
         myThread1.run();
         System.out.println("Main");
+
     }
 }
 
